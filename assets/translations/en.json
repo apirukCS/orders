@@ -1,0 +1,34 @@
+{
+  "title_list_product_page" : "ListProduct",
+
+  "name_menu_setting_language" : "Language",
+  "setting_language" : "SettingLanguage",
+  "en" : "English",
+  "th" : "Thai",
+
+  "name_menu_filter" : "Filter",
+  "filter_product" : "FilterProduct",
+  "price_range" : "PriceRange",
+  "minimum_price" : "MinimumPrice",
+  "maximum_price" : "MaximumPrice",
+  "text_alert_price_range" : "The highest price must be greater than the lowest price.",
+  "text_alert_minimum_price" : "The minimum price must be greater than 0.",
+  "sort_price" : "SortPrice",
+  "not_specified" : "NotSpecified",
+  "descending" : "Descending",
+  "not_descending" : "Ascending",
+  "filter_clear" : "Cleanup",
+
+  "cancel" : "Cancel",
+  "confirm" : "Confirm",
+
+  "add_to_cart" : "AddToCart",
+  "has_product_in_cart" : "This product is already in your cart.",
+  "detail_product" : "Detail product",
+
+  "title_cart_page" : "Cart",
+  "order_product" : "PlaceOrder",
+  "title_dialog_remove_product_in_cart" : "Remove products from cart.",
+  "detail_dialog_remove_product_in_cart" : "Are you sure?",
+  "confirm_order" : "Confirm to place order?"
+}
