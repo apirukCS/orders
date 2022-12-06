@@ -27,6 +27,9 @@ class _ListTileProductInCartState extends State<ListTileProductInCart> {
   @override
   Widget build(BuildContext context) {
     double w = displayWidth(context);
+    double h = displayHeight(context) -
+        MediaQuery.of(context).padding.top -
+        kToolbarHeight;
 
     return Card(
       elevation: 3,
@@ -36,14 +39,19 @@ class _ListTileProductInCartState extends State<ListTileProductInCart> {
           Localizations.localeOf(context).languageCode == "th"
               ? widget.product.productNameTh
               : widget.product.productNameEn,
-            maxLines: 2,
+          maxLines: 2,
           overflow: TextOverflow.ellipsis,
+          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
         ),
         subtitle: Text("฿ ${widget.product.price}"),
-        leading: Image.network(
-          widget.product.image,
-          width: w * 0.2,
-          fit: BoxFit.fitWidth,
+        leading: InkWell( 
+          onTap: _onTapImage,
+          child: Image.network(
+            widget.product.image,
+            width: w * 0.2,
+            height: h * 0.075,
+            fit: BoxFit.fill,
+          ),
         ),
         trailing: IconButton(
           icon: Icon(
@@ -75,5 +83,16 @@ class _ListTileProductInCartState extends State<ListTileProductInCart> {
           .removeWhere((item) => item.productId == proId);
     });
     widget.onTapRemove();
+  }
+
+  void _onTapImage() {
+    AweSomeDialogCustom.alertDialogJustHaveBody(context, Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Image.network(
+        widget.product.image,
+        //width: w * 0.2,
+        fit: BoxFit.fill,
+      ),
+    ), true);
   }
 }

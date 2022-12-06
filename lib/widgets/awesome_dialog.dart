@@ -24,8 +24,8 @@ class AweSomeDialogCustom {
       ..show();
   }
 
-  alertDialogJustHaveBody(
-      context, Widget widget, Function() onPressCancel, bool showIconCancel) {
+  static alertDialogJustHaveBody(
+      context, Widget widget, bool showIconCancel) {
     return AwesomeDialog(
         context: context,
         animType: AnimType.LEFTSLIDE,

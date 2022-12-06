@@ -39,8 +39,8 @@ class _CartState extends State<Cart> {
         title: Text("${LocaleKeys.title_cart_page.tr()}($countProduct)"),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: ListView.builder(
+        padding: const EdgeInsets.fromLTRB(8, 8, 8, 70),
+        child: ListView.builder( 
           shrinkWrap: true,
           itemCount: context.read<AppData>().products.length,
           itemBuilder: (context, index) {
