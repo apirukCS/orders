@@ -32,7 +32,13 @@ class _ListTileProductInCartState extends State<ListTileProductInCart> {
       elevation: 3,
       margin: const EdgeInsets.symmetric(vertical: 7),
       child: ListTile(
-        title: Text(widget.product.productNameTh),
+        title: Text(
+          Localizations.localeOf(context).languageCode == "th"
+              ? widget.product.productNameTh
+              : widget.product.productNameEn,
+            maxLines: 2,
+          overflow: TextOverflow.ellipsis,
+        ),
         subtitle: Text("฿ ${widget.product.price}"),
         leading: Image.network(
           widget.product.image,

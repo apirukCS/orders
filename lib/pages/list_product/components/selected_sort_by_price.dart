@@ -20,7 +20,6 @@ class _SelectedSortByPriceState extends State<SelectedSortByPrice> {
   @override
   Widget build(BuildContext context) {
     String isDescending = context.read<AppData>().isDescending;
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
