@@ -16,7 +16,6 @@ class ListTileProductInCart extends StatefulWidget {
   }) : super(key: key);
 
   final ProductModel product;
-
   final Function() onTapRemove;
 
   @override
@@ -31,34 +30,34 @@ class _ListTileProductInCartState extends State<ListTileProductInCart> {
         MediaQuery.of(context).padding.top -
         kToolbarHeight;
 
-    return Card(
-      elevation: 3,
-      margin: const EdgeInsets.symmetric(vertical: 7),
-      child: ListTile(
-        title: Text(
-          Localizations.localeOf(context).languageCode == "th"
-              ? widget.product.productNameTh
-              : widget.product.productNameEn,
-          maxLines: 2,
-          overflow: TextOverflow.ellipsis,
-          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-        ),
-        subtitle: Text("฿ ${widget.product.price}"),
-        leading: InkWell( 
-          onTap: _onTapImage,
-          child: Image.network(
+    return InkWell(
+      onTap: _onTapImage,
+      child: Card(
+        elevation: 3,
+        margin: const EdgeInsets.symmetric(vertical: 7),
+        child: ListTile(
+          title: Text(
+            Localizations.localeOf(context).languageCode == "th"
+                ? widget.product.productNameTh
+                : widget.product.productNameEn,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+          ),
+          subtitle: Text("฿ ${widget.product.price}"),
+          leading: Image.network(
             widget.product.image,
             width: w * 0.2,
             height: h * 0.075,
             fit: BoxFit.fill,
           ),
-        ),
-        trailing: IconButton(
-          icon: Icon(
-            Icons.delete_forever,
-            color: Colors.red.shade900,
+          trailing: IconButton(
+            icon: Icon(
+              Icons.delete_forever,
+              color: Colors.red.shade900,
+            ),
+            onPressed: _removeProductInCart,
           ),
-          onPressed: _removeProductInCart,
         ),
       ),
     );
