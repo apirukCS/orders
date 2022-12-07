@@ -41,7 +41,9 @@ class CodegenLoader extends AssetLoader{
   "order_product": "PlaceOrder",
   "title_dialog_remove_product_in_cart": "Remove products from cart.",
   "detail_dialog_remove_product_in_cart": "Are you sure?",
-  "confirm_order": "Confirm to place order?"
+  "confirm_order": "Confirm to place order?",
+  "chart": "Charts",
+  "chart_bar_graph_product": "Bar graph of product prices"
 };
 static const Map<String,dynamic> th = {
   "title_list_product_page": "รายการสินค้า",
@@ -70,7 +72,9 @@ static const Map<String,dynamic> th = {
   "order_product": "สั่งซื้อสินค้า",
   "title_dialog_remove_product_in_cart": "นำสินค้าออกจากรถเข็น",
   "detail_dialog_remove_product_in_cart": "คุณต้องการนำสินค้าออกจากรถเข็นใช่หรือไม่?",
-  "confirm_order": "ยืนยันการสั่งซื้อสินค้า?"
+  "confirm_order": "ยืนยันการสั่งซื้อสินค้า?",
+  "chart": "กราฟข้อมูล",
+  "chart_bar_graph_product": "กราฟแท่งแสดงราคาสินค้า"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"en": en, "th": th};
 }

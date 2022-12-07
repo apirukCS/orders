@@ -38,7 +38,7 @@ class ApiProduct {
           price: 250,
           detailTh: "ผ้าปูที่นอนขนาด 5 ฟุต เนื้อผ้านุ่ม ไม่ขาดง่าย \n\n$textExample",
           detailEn: "Bed sheet size 5 feet, soft fabric, not easily torn \n\n$textExampleEn",
-          image: "https://plusaround.com/wp-content/uploads/2022/09/1-1.jpeg"
+          image: "https://inwfile.com/s-cl/6dba2t.jpg"
       ),
       ProductModel(
           productId: 4,
@@ -47,7 +47,7 @@ class ApiProduct {
           price: 100,
           detailTh: "แว่นแข็งแรง ทนทาน เก๋ไก๋\n\n$textExample",
           detailEn: "Strong and durable eyeglasses  \n\n$textExampleEn",
-          image: "https://plusaround.com/wp-content/uploads/2021/09/MenSunglass-Cover2.jpg"
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9q8s0kQoxFTaZ90L9sP1md-b1ntSQMZQ1WaS-1xq3t9iCdwxYXZ_SI9GwZO97iEjFwMY&usqp=CAU"
       ),
       ProductModel(
           productId: 5,

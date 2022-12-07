@@ -28,5 +28,7 @@ abstract class  LocaleKeys {
   static const title_dialog_remove_product_in_cart = 'title_dialog_remove_product_in_cart';
   static const detail_dialog_remove_product_in_cart = 'detail_dialog_remove_product_in_cart';
   static const confirm_order = 'confirm_order';
+  static const chart = 'chart';
+  static const chart_bar_graph_product = 'chart_bar_graph_product';
 
 }

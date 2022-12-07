@@ -30,5 +30,8 @@
   "order_product" : "สั่งซื้อสินค้า",
   "title_dialog_remove_product_in_cart" : "นำสินค้าออกจากรถเข็น",
   "detail_dialog_remove_product_in_cart" : "คุณต้องการนำสินค้าออกจากรถเข็นใช่หรือไม่?",
-  "confirm_order" : "ยืนยันการสั่งซื้อสินค้า?"
+  "confirm_order" : "ยืนยันการสั่งซื้อสินค้า?",
+
+  "chart" : "กราฟข้อมูล",
+  "chart_bar_graph_product" : "กราฟแท่งแสดงราคาสินค้า"
 }

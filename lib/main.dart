@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:orders/pages/list_product/list_product_screen.dart';
+import 'package:orders/pages/homepage/home_page_screen.dart';
 import 'package:orders/service/provider/appData.dart';
 import 'package:orders/translations/codegen_loader.g.dart';
 import 'package:provider/provider.dart';
@@ -55,8 +55,9 @@ class _MyAppState extends State<MyApp> {
         ),
         primaryColor: Colors.red.shade900,
       ),
+      debugShowCheckedModeBanner: false,
 
-      home: const ListProductScreen(),
+      home: const HomePageScreen(),
     );
   }
 }

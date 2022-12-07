@@ -22,6 +22,24 @@ class DetailProductScreen extends StatefulWidget {
 }
 
 class _DetailProductScreenState extends State<DetailProductScreen> {
+  double paddingLeft = 10;
+  double paddingTop = 0;
+
+  double imgW = 150;
+  double imgH = 100;
+
+  bool isOnPressAddProduct = false;
+
+  @override
+  void initState() {
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      setState(() {
+        paddingTop = displayHeight(context) - 200;
+      });
+    });
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     double w = displayWidth(context);
@@ -30,60 +48,108 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
         kToolbarHeight;
 
     return Scaffold(
-      body: ListView(
+      body: Stack(
         children: [
           SizedBox(
-            width: double.infinity,
-            height: h * 0.35,
-            child: Stack(
+            height: displayHeight(context),
+            child: ListView(
+              shrinkWrap: true,
+              physics: const AlwaysScrollableScrollPhysics(),
               children: [
-                Image.network(
-                  widget.product.image,
+                SizedBox(
                   width: double.infinity,
                   height: h * 0.35,
-                  fit: BoxFit.fill,
+                  child: Stack(
+                    children: [
+                      Image.network(
+                        widget.product.image,
+                        width: double.infinity,
+                        height: h * 0.35,
+                        fit: BoxFit.fill,
+                      ),
+                      TopBar(
+                        onTap: () {
+                          setState(() {});
+                        },
+                      ),
+                    ],
+                  ),
                 ),
-                TopBar(
-                  onTap: () {
-                    setState(() {});
-                  },
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: DetailProduct(
+                    product: widget.product,
+                  ),
                 ),
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: DetailProduct(
-              product: widget.product,
+          isOnPressAddProduct == true
+              ? Padding(
+                  padding: EdgeInsets.only(left: paddingLeft, top: paddingTop),
+                  child: Image.network(
+                    widget.product.image,
+                    width: imgW,
+                    height: imgH,
+                    fit: BoxFit.fill,
+                  ),
+                )
+              : const SizedBox(),
+          Positioned(
+            bottom: 0,
+            child: InkWell(
+              onTap: _onTapAddProductToCart,
+              child: SizedBox(
+                width: w,
+                height: 60,
+                child: Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: FullButton(
+                    icon: const Icon(
+                      Icons.shopping_cart_rounded,
+                      color: Colors.white70,
+                    ),
+                    text: LocaleKeys.add_to_cart.tr(),
+                    textColor: Colors.white70,
+                    background: Theme.of(context).primaryColor,
+                  ),
+                ),
+              ),
             ),
           ),
         ],
-      ),
-      bottomSheet: InkWell(
-        onTap: _onTapAddProductToCart,
-        child: SizedBox(
-          width: w,
-          height: 60,
-          child: Padding(
-            padding: const EdgeInsets.all(8),
-            child: FullButton(
-              icon: const Icon(
-                Icons.shopping_cart_rounded,
-                color: Colors.white70,
-              ),
-              text: LocaleKeys.add_to_cart.tr(),
-              textColor: Colors.white70,
-              background: Theme.of(context).primaryColor,
-            ),
-          ),
-        ),
       ),
     );
   }
 
   void _onTapAddProductToCart() {
-    int proId = widget.product.productId;
 
+    //animation when add product
+    /*setState(() {
+      isOnPressAddProduct = true;
+    });
+    animationAddProduct().then((value){
+      int proId = widget.product.productId;
+
+      var contain = context
+          .read<AppData>()
+          .products
+          .where((element) => element.productId == proId);
+      if (contain.isEmpty) {
+        context.read<AppData>().products.add(widget.product);
+        setState(() {});
+      } else {
+        AweSomeDialogCustom.alertDialog(
+            context,
+            "\n${LocaleKeys.has_product_in_cart.tr()}",
+            "",
+            DialogType.noHeader,
+                () {});
+      }
+    });*/
+
+    //not animation
+    int proId = widget.product.productId;
     var contain = context
         .read<AppData>()
         .products
@@ -98,6 +164,27 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
           "",
           DialogType.noHeader,
           () {});
+    }
+  }
+
+  Future<void> animationAddProduct() async {
+    // double heightOfPaddingTop = paddingTop;
+    for (int i = 0; i < paddingTop; i++) {
+      if (paddingTop >= 20) {
+        await Future.delayed(const Duration(microseconds: 1), () {
+          setState(() {
+            paddingTop = paddingTop - 1;
+            paddingLeft = paddingLeft + 0.5;
+            imgW = imgW - 0.1;
+            imgH = imgH - 0.1;
+          });
+        });
+        i = 0;
+      } else {
+        setState(() {
+          isOnPressAddProduct = false;
+        });
+      }
     }
   }
 }

@@ -30,5 +30,8 @@
   "order_product" : "PlaceOrder",
   "title_dialog_remove_product_in_cart" : "Remove products from cart.",
   "detail_dialog_remove_product_in_cart" : "Are you sure?",
-  "confirm_order" : "Confirm to place order?"
+  "confirm_order" : "Confirm to place order?",
+
+  "chart" : "Charts",
+  "chart_bar_graph_product" : "Bar graph of product prices."
 }
