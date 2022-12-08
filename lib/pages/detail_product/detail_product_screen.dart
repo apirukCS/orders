@@ -168,7 +168,6 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
   }
 
   Future<void> animationAddProduct() async {
-    // double heightOfPaddingTop = paddingTop;
     for (int i = 0; i < paddingTop; i++) {
       if (paddingTop >= 20) {
         await Future.delayed(const Duration(microseconds: 1), () {

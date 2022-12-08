@@ -40,7 +40,7 @@ class _CartState extends State<Cart> {
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(8, 8, 8, 70),
-        child: ListView.builder( 
+        child: ListView.builder(
           shrinkWrap: true,
           itemCount: context.read<AppData>().products.length,
           itemBuilder: (context, index) {

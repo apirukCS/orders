@@ -1,10 +1,12 @@
 {
   "title_list_product_page" : "ListProduct",
-
   "name_menu_setting_language" : "Language",
   "setting_language" : "SettingLanguage",
   "en" : "English",
   "th" : "Thai",
+
+  "exit_the_application" : "Exit the application ?",
+  "sub_exit_the_application" : "Do you want to exit the application ?",
 
   "name_menu_filter" : "Filter",
   "filter_product" : "FilterProduct",
@@ -33,5 +35,15 @@
   "confirm_order" : "Confirm to place order?",
 
   "chart" : "Charts",
-  "chart_bar_graph_product" : "Bar graph of product prices."
+  "chart_bar_graph_product" : "Bar graph of product prices.",
+
+  "email" : "Email",
+  "password" : "Password",
+  "alert_validate_email" : "Please enter your email address.",
+  "alert_validate_password" : "Please enter your password.",
+  "ask_forget_password" : "Forgot Password ?",
+  "sign_in" : "Sign In",
+  "dont_have_an_account" : "Don't have an account ?",
+  "register" : "Register",
+  "alert_wrong_email_or_password" : "Email or password is incorrect."
 }

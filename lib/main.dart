@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:orders/pages/homepage/home_page_screen.dart';
+import 'package:orders/pages/shared/splash/splash_screen.dart';
 import 'package:orders/service/provider/appData.dart';
 import 'package:orders/translations/codegen_loader.g.dart';
 import 'package:provider/provider.dart';
@@ -57,7 +57,7 @@ class _MyAppState extends State<MyApp> {
       ),
       debugShowCheckedModeBanner: false,
 
-      home: const HomePageScreen(),
+      home: const SplashScreen(),
     );
   }
 }

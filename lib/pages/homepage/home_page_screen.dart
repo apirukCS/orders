@@ -2,6 +2,7 @@ import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:orders/pages/charts/charts_screen.dart';
 import 'package:orders/pages/list_product/list_product_screen.dart';
+import 'package:orders/pages/profile/profile_screen.dart';
 
 class HomePageScreen extends StatefulWidget {
   const HomePageScreen({Key? key}) : super(key: key);
@@ -31,11 +32,12 @@ class _HomePageScreenState extends State<HomePageScreen> {
         children: const <Widget>[
           ListProductScreen(),
           ChartsScreen(),
+          ProfileScreen(),
         ],
       ),
       bottomNavigationBar: BottomNavyBar(
         containerHeight: 55.0,
-        backgroundColor: Colors.red.shade900,
+        backgroundColor: Theme.of(context).primaryColor,
         selectedIndex: _currentIndex,
         itemCornerRadius: 24,
         onItemSelected: (index) => setState(() {
@@ -52,9 +54,9 @@ class _HomePageScreenState extends State<HomePageScreen> {
               color: Colors.white,
             ),
             title: Text(
-                Localizations.localeOf(context).languageCode == "th"
-                    ? "รายการสินค้า"
-                    : "ListProduct",
+              Localizations.localeOf(context).languageCode == "th"
+                  ? "รายการสินค้า"
+                  : "ListProduct",
               style: const TextStyle(color: Colors.white),
             ),
             activeColor: Colors.white,
@@ -67,10 +69,23 @@ class _HomePageScreenState extends State<HomePageScreen> {
               color: Colors.white,
             ),
             title: Text(
-                Localizations.localeOf(context).languageCode == "th"
-                    ? "กราฟข้อมูล"
-                    : "Charts",
+              Localizations.localeOf(context).languageCode == "th"
+                  ? "กราฟข้อมูล"
+                  : "Charts",
               style: const TextStyle(color: Colors.white),
+            ),
+            activeColor: Colors.white,
+            textAlign: TextAlign.center,
+          ),
+          BottomNavyBarItem(
+            inactiveColor: Colors.black54,
+            icon: const Icon(
+              Icons.person_outline,
+              color: Colors.white,
+            ),
+            title: const Text(
+              "Profile",
+              style: TextStyle(color: Colors.white),
             ),
             activeColor: Colors.white,
             textAlign: TextAlign.center,

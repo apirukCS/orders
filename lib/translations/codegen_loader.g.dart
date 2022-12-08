@@ -20,6 +20,8 @@ class CodegenLoader extends AssetLoader{
   "setting_language": "SettingLanguage",
   "en": "English",
   "th": "Thai",
+  "exit_the_application": "Exit the application ?",
+  "sub_exit_the_application": "Do you want to exit the application ?",
   "name_menu_filter": "Filter",
   "filter_product": "FilterProduct",
   "price_range": "PriceRange",
@@ -43,7 +45,16 @@ class CodegenLoader extends AssetLoader{
   "detail_dialog_remove_product_in_cart": "Are you sure?",
   "confirm_order": "Confirm to place order?",
   "chart": "Charts",
-  "chart_bar_graph_product": "Bar graph of product prices"
+  "chart_bar_graph_product": "Bar graph of product prices.",
+  "email": "Email",
+  "password": "Password",
+  "alert_validate_email": "Please enter your email address.",
+  "alert_validate_password": "Please enter your password.",
+  "ask_forget_password": "Forgot Password ?",
+  "sign_in": "Sign In",
+  "dont_have_an_account": "Don't have an account ?",
+  "register": "Register",
+  "alert_wrong_email_or_password": "Email or password is incorrect."
 };
 static const Map<String,dynamic> th = {
   "title_list_product_page": "รายการสินค้า",
@@ -51,6 +62,8 @@ static const Map<String,dynamic> th = {
   "setting_language": "ตั้งค่าภาษา",
   "en": "อังกฤษ",
   "th": "ไทย",
+  "exit_the_application": "ออกจากแอปพลิเคชัน ?",
+  "sub_exit_the_application": "คุณต้องการออกจากแอปพลิเคชันใช่หรือไม่ ?",
   "name_menu_filter": "ตัวกรอง",
   "filter_product": "ตัวกรองข้อมูลสินค้า",
   "price_range": "ช่วงราคา",
@@ -74,7 +87,16 @@ static const Map<String,dynamic> th = {
   "detail_dialog_remove_product_in_cart": "คุณต้องการนำสินค้าออกจากรถเข็นใช่หรือไม่?",
   "confirm_order": "ยืนยันการสั่งซื้อสินค้า?",
   "chart": "กราฟข้อมูล",
-  "chart_bar_graph_product": "กราฟแท่งแสดงราคาสินค้า"
+  "chart_bar_graph_product": "กราฟแท่งแสดงราคาสินค้า",
+  "email": "อีเมล",
+  "password": "รหัสผ่าน",
+  "alert_validate_email": "โปรดกรอกอีเมล",
+  "alert_validate_password": "โปรดกรอกรหัสผ่าน",
+  "ask_forget_password": "ลืมรหัสผ่านใช่หรือไม่ ?",
+  "sign_in": "เข้าสู่ระบบ",
+  "dont_have_an_account": "ยังไม่มีบัญชีใช่หรือไม่ ?",
+  "register": "ลงทะเบียน",
+  "alert_wrong_email_or_password": "อีเมลหรือรหัสผ่านไม่ถูกต้อง"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"en": en, "th": th};
 }

@@ -6,6 +6,8 @@ abstract class  LocaleKeys {
   static const setting_language = 'setting_language';
   static const en = 'en';
   static const th = 'th';
+  static const exit_the_application = 'exit_the_application';
+  static const sub_exit_the_application = 'sub_exit_the_application';
   static const name_menu_filter = 'name_menu_filter';
   static const filter_product = 'filter_product';
   static const price_range = 'price_range';
@@ -30,5 +32,14 @@ abstract class  LocaleKeys {
   static const confirm_order = 'confirm_order';
   static const chart = 'chart';
   static const chart_bar_graph_product = 'chart_bar_graph_product';
+  static const email = 'email';
+  static const password = 'password';
+  static const alert_validate_email = 'alert_validate_email';
+  static const alert_validate_password = 'alert_validate_password';
+  static const ask_forget_password = 'ask_forget_password';
+  static const sign_in = 'sign_in';
+  static const dont_have_an_account = 'dont_have_an_account';
+  static const register = 'register';
+  static const alert_wrong_email_or_password = 'alert_wrong_email_or_password';
 
 }

@@ -6,6 +6,9 @@
   "en" : "อังกฤษ",
   "th" : "ไทย",
 
+  "exit_the_application" : "ออกจากแอปพลิเคชัน ?",
+  "sub_exit_the_application" : "คุณต้องการออกจากแอปพลิเคชันใช่หรือไม่ ?",
+
   "name_menu_filter" : "ตัวกรอง",
   "filter_product" : "ตัวกรองข้อมูลสินค้า",
   "price_range" : "ช่วงราคา",
@@ -33,5 +36,15 @@
   "confirm_order" : "ยืนยันการสั่งซื้อสินค้า?",
 
   "chart" : "กราฟข้อมูล",
-  "chart_bar_graph_product" : "กราฟแท่งแสดงราคาสินค้า"
+  "chart_bar_graph_product" : "กราฟแท่งแสดงราคาสินค้า",
+
+  "email" : "อีเมล",
+  "password" : "รหัสผ่าน",
+  "alert_validate_email" : "โปรดกรอกอีเมล",
+  "alert_validate_password" : "โปรดกรอกรหัสผ่าน",
+  "ask_forget_password" : "ลืมรหัสผ่านใช่หรือไม่ ?",
+  "sign_in" : "เข้าสู่ระบบ",
+  "dont_have_an_account" : "ยังไม่มีบัญชีใช่หรือไม่ ?",
+  "register" : "ลงทะเบียน",
+  "alert_wrong_email_or_password" : "อีเมลหรือรหัสผ่านไม่ถูกต้อง"
 }

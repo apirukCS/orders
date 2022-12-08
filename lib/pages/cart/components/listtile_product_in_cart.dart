@@ -85,13 +85,16 @@ class _ListTileProductInCartState extends State<ListTileProductInCart> {
   }
 
   void _onTapImage() {
-    AweSomeDialogCustom.alertDialogJustHaveBody(context, Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Image.network(
-        widget.product.image,
-        //width: w * 0.2,
-        fit: BoxFit.fill,
-      ),
-    ), true);
+    AweSomeDialogCustom.alertDialogJustHaveBody(
+        context,
+        Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Image.network(
+            widget.product.image,
+            //width: w * 0.2,
+            fit: BoxFit.fill,
+          ),
+        ),
+        true);
   }
 }
