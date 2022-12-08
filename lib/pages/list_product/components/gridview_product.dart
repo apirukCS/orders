@@ -103,6 +103,7 @@ class _GridViewProductState extends State<GridViewProduct> {
                               style: const TextStyle(
                                 color: Colors.black87,
                                 fontWeight: FontWeight.bold,
+                                fontSize: 14.5,
                               ),
                             ),
                           ),

@@ -1,9 +1,7 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:orders/pages/charts/charts_screen.dart';
 import 'package:orders/pages/list_product/list_product_screen.dart';
-import 'package:orders/translations/locale_keys.g.dart';
 
 class HomePageScreen extends StatefulWidget {
   const HomePageScreen({Key? key}) : super(key: key);
@@ -39,9 +37,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
         containerHeight: 55.0,
         backgroundColor: Colors.red.shade900,
         selectedIndex: _currentIndex,
-        showElevation: true,
         itemCornerRadius: 24,
-        curve: Curves.easeIn,
         onItemSelected: (index) => setState(() {
           _currentIndex = index;
           _pageController.animateToPage(index,
@@ -56,7 +52,9 @@ class _HomePageScreenState extends State<HomePageScreen> {
               color: Colors.white,
             ),
             title: Text(
-              LocaleKeys.title_list_product_page.tr(),
+                Localizations.localeOf(context).languageCode == "th"
+                    ? "รายการสินค้า"
+                    : "ListProduct",
               style: const TextStyle(color: Colors.white),
             ),
             activeColor: Colors.white,
@@ -69,7 +67,9 @@ class _HomePageScreenState extends State<HomePageScreen> {
               color: Colors.white,
             ),
             title: Text(
-              LocaleKeys.chart.tr(),
+                Localizations.localeOf(context).languageCode == "th"
+                    ? "กราฟข้อมูล"
+                    : "Charts",
               style: const TextStyle(color: Colors.white),
             ),
             activeColor: Colors.white,

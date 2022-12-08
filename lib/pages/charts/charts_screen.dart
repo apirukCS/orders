@@ -22,9 +22,10 @@ class _ChartsScreenState extends State<ChartsScreen> {
         title: Text(LocaleKeys.chart.tr()),
       ),
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(8, 40, 8, 0),
+        padding: const EdgeInsets.all(8.0),
         child: ListView(
           children: [
+           const SizedBox(height: 30),
             Center(
               child: Text(
                 LocaleKeys.chart_bar_graph_product.tr(),
@@ -43,11 +44,16 @@ class _ChartsScreenState extends State<ChartsScreen> {
                     List<ProductModel> products = productFuture.data ?? [];
                     if (products.isNotEmpty) {
                       return SfCartesianChart(
-                        plotAreaBorderWidth: 0,
+                        enableAxisAnimation: true,
                         primaryXAxis: CategoryAxis(
                           labelPosition: ChartDataLabelPosition.outside,
                           labelRotation: 90,
                         ),
+                        /*primaryYAxis: NumericAxis(
+                            title: AxisTitle(
+                                text: 'ราคาสินค้า',
+                            )
+                        ),*/
                         series: <ChartSeries>[
                           ColumnSeries<ProductModel, String>(
                             animationDuration: 2000,

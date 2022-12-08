@@ -61,10 +61,10 @@ class ApiProduct {
       ProductModel(
           productId: 6,
           productNameTh: "โทรศัพท์ Iphone 14",
-          productNameEn: "Iphone 14",
-          price: 37500,
-          detailTh: "Iphone 14 / 14 pro / 14 Pro max สวยม๊วกกกก \n\n$textExample",
-          detailEn: "Iphone 14 / 14 pro / 14 Pro max it's so bueatiful \n\n$textExampleEn",
+          productNameEn: "Iphone XR",
+          price: 7000,
+          detailTh: "Iphone XR สวยม๊วกกกก \n\n$textExample",
+          detailEn: "Iphone XR it's so bueatiful \n\n$textExampleEn",
           image: "https://www.flashfly.net/wp/wp-content/uploads/2022/07/Its-not-a-one-off-thing-future-non-Pro-iPhones-will-no-longer-have-the-latest-Apple-processors.jpg"
       ),
       ProductModel(
