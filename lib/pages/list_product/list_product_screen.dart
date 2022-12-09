@@ -45,16 +45,6 @@ class _ListProductScreenState extends State<ListProductScreen> {
               ),
             ),
             const SizedBox(width: 10),
-            InkWell(
-              onTap: _onTapSetting,
-              child: Row(
-                children: [
-                  const Icon(Icons.settings),
-                  Text(LocaleKeys.name_menu_setting_language.tr()),
-                ],
-              ),
-            ),
-            const SizedBox(width: 10),
           ],
         ),
         body: Padding(
@@ -88,15 +78,6 @@ class _ListProductScreenState extends State<ListProductScreen> {
             });
           },
         );
-      },
-    );
-  }
-
-  void _onTapSetting() {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return const AlertSettingLanguage();
       },
     );
   }

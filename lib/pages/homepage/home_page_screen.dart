@@ -1,8 +1,10 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:orders/pages/charts/charts_screen.dart';
 import 'package:orders/pages/list_product/list_product_screen.dart';
 import 'package:orders/pages/profile/profile_screen.dart';
+import 'package:orders/translations/locale_keys.g.dart';
 
 class HomePageScreen extends StatefulWidget {
   const HomePageScreen({Key? key}) : super(key: key);
@@ -83,9 +85,9 @@ class _HomePageScreenState extends State<HomePageScreen> {
               Icons.person_outline,
               color: Colors.white,
             ),
-            title: const Text(
-              "Profile",
-              style: TextStyle(color: Colors.white),
+            title: Text(
+              "${LocaleKeys.profile.tr()} ",
+              style: const TextStyle(color: Colors.white),
             ),
             activeColor: Colors.white,
             textAlign: TextAlign.center,

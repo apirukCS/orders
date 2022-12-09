@@ -1,32 +1,62 @@
 import 'package:flutter/material.dart';
 
 class TitleProfile extends StatelessWidget {
-  const TitleProfile({Key? key}) : super(key: key);
+  const TitleProfile({
+    Key? key,
+    required this.image,
+    required this.name,
+    required this.phone,
+  }) : super(key: key);
+
+  final String image;
+  final String name;
+  final String phone;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Row(
+      child: Column(
         children: [
-          InkWell(
-            child: const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Icon(Icons.arrow_back_ios_new),
+          CircleAvatar(
+            radius: 50.0,
+            backgroundColor: Theme.of(context).primaryColor,
+            child: CircleAvatar(
+              radius: 48.0,
+              backgroundImage: NetworkImage(image),
             ),
-            onTap: () {
-              Navigator.pop(context);
-            },
           ),
-          const Expanded(
-            child: Center(
-              child: Padding(
-                padding: EdgeInsets.only(right: 18),
-                child: Text(
-                  "Profile",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          const SizedBox(height: 16),
+          Center(
+            child: Column(
+              children: [
+                Text(
+                  name,
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
+                const SizedBox(height: 4),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.phone,
+                      size: 16,
+                      color: Theme.of(context).primaryColor,
+                    ),
+                    const SizedBox(width: 4),
+                    Text(
+                      phone,
+                      style: const TextStyle(
+                        fontSize: 14,
+                        color: Colors.black54,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
         ],

@@ -46,5 +46,8 @@
   "sign_in" : "เข้าสู่ระบบ",
   "dont_have_an_account" : "ยังไม่มีบัญชีใช่หรือไม่ ?",
   "register" : "ลงทะเบียน",
-  "alert_wrong_email_or_password" : "อีเมลหรือรหัสผ่านไม่ถูกต้อง"
+  "alert_wrong_email_or_password" : "อีเมลหรือรหัสผ่านไม่ถูกต้อง",
+
+  "profile" : "โปรไฟล์",
+  "sign_out" : "ออกจากระบบ"
 }

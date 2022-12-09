@@ -21,7 +21,6 @@ class FullButton extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: background,
-        //color: Colors.red[900],
         borderRadius: BorderRadius.circular(radius ?? 30.0),
       ),
       child: Padding(

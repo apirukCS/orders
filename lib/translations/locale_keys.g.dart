@@ -41,5 +41,7 @@ abstract class  LocaleKeys {
   static const dont_have_an_account = 'dont_have_an_account';
   static const register = 'register';
   static const alert_wrong_email_or_password = 'alert_wrong_email_or_password';
+  static const profile = 'profile';
+  static const sign_out = 'sign_out';
 
 }

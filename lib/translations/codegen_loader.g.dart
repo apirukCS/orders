@@ -54,7 +54,9 @@ class CodegenLoader extends AssetLoader{
   "sign_in": "Sign In",
   "dont_have_an_account": "Don't have an account ?",
   "register": "Register",
-  "alert_wrong_email_or_password": "Email or password is incorrect."
+  "alert_wrong_email_or_password": "Email or password is incorrect.",
+  "profile": "Profile",
+  "sign_out": "Sign out"
 };
 static const Map<String,dynamic> th = {
   "title_list_product_page": "รายการสินค้า",
@@ -96,7 +98,9 @@ static const Map<String,dynamic> th = {
   "sign_in": "เข้าสู่ระบบ",
   "dont_have_an_account": "ยังไม่มีบัญชีใช่หรือไม่ ?",
   "register": "ลงทะเบียน",
-  "alert_wrong_email_or_password": "อีเมลหรือรหัสผ่านไม่ถูกต้อง"
+  "alert_wrong_email_or_password": "อีเมลหรือรหัสผ่านไม่ถูกต้อง",
+  "profile": "โปรไฟล์",
+  "sign_out": "ออกจากระบบ"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"en": en, "th": th};
 }

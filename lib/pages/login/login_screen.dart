@@ -152,30 +152,33 @@ class _LoginScreenState extends State<LoginScreen> {
       String email = emailController.text.toString();
       String password = passwordController.text.toString();
 
-      ApiUser.fetchAllUsers().then((value) {
-        var contain = value.where((element) =>
-            element.email == email && element.password == password);
-        if (contain.isNotEmpty) {
-          context.read<AppData>().userId = contain.first.userId;
-          AweSomeDialogCustom.alertDialogJustHaveBody(
-              context,
-              widgetDialogLoading(),
-              false);
-          Future.delayed(const Duration(seconds: 3), () {
+      /*String email = "test1@gmail.com";
+      String password = "test1@password";*/
+
+      AweSomeDialogCustom.alertDialogJustHaveBody(
+          context, widgetDialogLoading(), false);
+
+      Future.delayed(const Duration(seconds: 1), () {
+        ApiUser.fetchAllUsers().then((value) {
+          var contain = value.where((element) =>
+              element.email == email && element.password == password);
+          if (contain.isNotEmpty) {
+            context.read<AppData>().userId = contain.first.userId;
             Navigator.pop(context);
             Navigator.push(
                 context,
                 MaterialPageRoute(
                     builder: (context) => const HomePageScreen()));
-          });
-        } else {
-          AweSomeDialogCustom.alertDialog(
-              context,
-              "\n${LocaleKeys.alert_wrong_email_or_password.tr()}",
-              "",
-              DialogType.noHeader,
-              () {});
-        }
+          } else {
+            Navigator.pop(context);
+            AweSomeDialogCustom.alertDialog(
+                context,
+                "\n${LocaleKeys.alert_wrong_email_or_password.tr()}",
+                "",
+                DialogType.noHeader,
+                () {});
+          }
+        });
       });
     }
   }
@@ -191,7 +194,7 @@ class _LoginScreenState extends State<LoginScreen> {
     fPassword.unfocus();
   }
 
-  Widget widgetDialogLoading(){
+  Widget widgetDialogLoading() {
     return Padding(
       padding: const EdgeInsets.all(24.0),
       child: Column(

@@ -45,5 +45,8 @@
   "sign_in" : "Sign In",
   "dont_have_an_account" : "Don't have an account ?",
   "register" : "Register",
-  "alert_wrong_email_or_password" : "Email or password is incorrect."
+  "alert_wrong_email_or_password" : "Email or password is incorrect.",
+
+  "profile" : "Profile",
+  "sign_out" : "Sign out"
 }
