@@ -6,7 +6,7 @@ import 'package:orders/pages/list_product/list_product_screen.dart';
 import 'package:orders/service/provider/appData.dart';
 import 'package:orders/sizes/sizes.dart';
 import 'package:orders/translations/locale_keys.g.dart';
-import 'package:orders/widgets/awesome_dialog.dart';
+import 'package:orders/widgets/alert.dart';
 import 'package:orders/widgets/full_button.dart';
 import 'package:orders/widgets/icon_back.dart';
 import 'package:provider/provider.dart';
@@ -64,7 +64,7 @@ class _CartState extends State<Cart> {
   }
 
   void _onTapByProduct() {
-    AweSomeDialogCustom.alertDialog(
+    Alert.alertDialog(
       context,
       "\n${LocaleKeys.confirm_order.tr()}",
       "",

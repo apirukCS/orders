@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:orders/model/user_model.dart';
 
 class ApiUser {
@@ -49,5 +50,10 @@ class ApiUser {
     List<UserModel> users = await fetchAllUsers();
     var contain = users.where((element) => element.userId == id);
     return contain.first;
+  }
+
+  static Future<void> editUser(Map<String,dynamic> data) async {
+    await Future.delayed(const Duration(seconds: 1),(){});
+    //api edit
   }
 }

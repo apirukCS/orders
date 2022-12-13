@@ -8,7 +8,7 @@ import 'package:orders/pages/login/components/forgot_password.dart';
 import 'package:orders/pages/login/components/name_and_logo_app.dart';
 import 'package:orders/service/provider/appData.dart';
 import 'package:orders/translations/locale_keys.g.dart';
-import 'package:orders/widgets/awesome_dialog.dart';
+import 'package:orders/widgets/alert.dart';
 import 'package:orders/widgets/dialog_loading.dart';
 import 'package:orders/widgets/full_button.dart';
 import 'package:provider/provider.dart';
@@ -85,7 +85,6 @@ class _LoginScreenState extends State<LoginScreen> {
                                 TextFormField(
                                   controller: passwordController,
                                   focusNode: fPassword,
-                                  keyboardType: TextInputType.number,
                                   obscureText: obscurePassword,
                                   decoration: InputDecoration(
                                       prefixIcon:
@@ -149,7 +148,7 @@ class _LoginScreenState extends State<LoginScreen> {
       String email = emailController.text.toString();
       String password = passwordController.text.toString();
 
-      AweSomeDialogCustom.alertDialogJustHaveBody(
+      Alert.alertDialogJustHaveBody(
         context,
         const DialogLoading(),
         false,
@@ -167,7 +166,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     builder: (context) => const HomePageScreen()));
           } else {
             Navigator.pop(context);
-            AweSomeDialogCustom.alertDialog(
+            Alert.alertDialog(
               context,
               "\n${LocaleKeys.alert_wrong_email_or_password.tr()}",
               "",

@@ -26,7 +26,8 @@ class CardMenuSettings extends StatelessWidget {
           child: ListView(
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
-            children: [ 
+            children: [
+              const SizedBox(height: 12),
               Text(LocaleKeys.settings.tr()),
               const SizedBox(height: 12),
               Padding(
@@ -37,10 +38,12 @@ class CardMenuSettings extends StatelessWidget {
                       topicMenu: Localizations.localeOf(context).languageCode == 'en'
                           ? LocaleKeys.name_menu_setting_language.tr()
                           : LocaleKeys.name_menu_setting_language.tr(),
+                      icon: Icons.settings,
                       onTap: () {
                         _onTapLanguage(context);
                       },
                     ),
+
                   ],
                 ),
               ),

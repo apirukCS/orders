@@ -7,7 +7,7 @@ import 'package:orders/pages/detail_product/components/top_bar.dart';
 import 'package:orders/service/provider/appData.dart';
 import 'package:orders/sizes/sizes.dart';
 import 'package:orders/translations/locale_keys.g.dart';
-import 'package:orders/widgets/awesome_dialog.dart';
+import 'package:orders/widgets/alert.dart';
 import 'package:orders/widgets/full_button.dart';
 import 'package:provider/provider.dart';
 
@@ -125,7 +125,7 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
       widget.onTabAddProductToCart();
       setState(() {});
     } else {
-      AweSomeDialogCustom.alertDialog(
+      Alert.alertDialog(
         context,
         "\n${LocaleKeys.has_product_in_cart.tr()}",
         "",

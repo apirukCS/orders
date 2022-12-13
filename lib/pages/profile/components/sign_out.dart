@@ -3,7 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:orders/translations/locale_keys.g.dart';
-import 'package:orders/widgets/awesome_dialog.dart';
+import 'package:orders/widgets/alert.dart';
 import 'package:orders/widgets/full_button.dart';
 
 class SignOut extends StatelessWidget {
@@ -25,7 +25,7 @@ class SignOut extends StatelessWidget {
   }
 
   void onTapSignOut(BuildContext context) {
-    AweSomeDialogCustom.alertDialog(
+    Alert.alertDialog(
       context,
       LocaleKeys.exit_the_application.tr(),
       LocaleKeys.sub_exit_the_application.tr(),

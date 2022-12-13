@@ -5,7 +5,7 @@ import 'package:orders/model/product_model.dart';
 import 'package:orders/service/provider/appData.dart';
 import 'package:orders/sizes/sizes.dart';
 import 'package:orders/translations/locale_keys.g.dart';
-import 'package:orders/widgets/awesome_dialog.dart';
+import 'package:orders/widgets/alert.dart';
 import 'package:provider/provider.dart';
 
 class ListTileProductInCart extends StatefulWidget {
@@ -64,7 +64,7 @@ class _ListTileProductInCartState extends State<ListTileProductInCart> {
   }
 
   void _removeProductInCart() {
-    AweSomeDialogCustom.alertDialog(
+    Alert.alertDialog(
       context,
       LocaleKeys.title_dialog_remove_product_in_cart.tr(),
       LocaleKeys.detail_dialog_remove_product_in_cart.tr(),
@@ -86,7 +86,7 @@ class _ListTileProductInCartState extends State<ListTileProductInCart> {
   }
 
   void _onTapImage() {
-    AweSomeDialogCustom.alertDialogJustHaveBody(
+    Alert.alertDialogJustHaveBody(
       context,
       Padding(
         padding: const EdgeInsets.all(16.0),

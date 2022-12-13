@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:orders/pages/edit_profile.dart';
+import 'package:orders/pages/edit_profile/edit_profile.dart';
 
 class TitleProfile extends StatelessWidget {
   const TitleProfile({

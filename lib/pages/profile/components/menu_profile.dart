@@ -5,21 +5,23 @@ class MenuProfile extends StatelessWidget {
     Key? key,
     required this.topicMenu,
     required this.onTap,
+    required this.icon,
   }) : super(key: key);
 
   final String topicMenu;
   final Function() onTap;
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
-    return InkWell( 
+    return InkWell(
       onTap: onTap,
       child: Row(
         children: [
-          const Padding(
-            padding: EdgeInsets.only(top: 4),
+          Padding(
+            padding: const EdgeInsets.only(top: 4),
             child: Icon(
-              Icons.settings,
+              icon,
               size: 20,
             ),
           ),

@@ -22,7 +22,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
       onWillPop: _onWillPop,
       child: SafeArea(
         child: Scaffold(
-
           body: Padding(
             padding: const EdgeInsets.all(8.0),
             child: ListView(

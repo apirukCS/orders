@@ -1,7 +1,7 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 
-class AweSomeDialogCustom {
+class Alert {
   static alertDialog(context, String title, String desc,
       DialogType type,[VoidCallback? btnOkOnPress,VoidCallback? btnCancelOnPress]) {
     return AwesomeDialog(
@@ -22,14 +22,14 @@ class AweSomeDialogCustom {
   }
 
   static alertDialogJustHaveBody(
-      context, Widget widget, bool showIconCancel) {
+      context, Widget widget,[bool? isShowIconCancel]) {
     return AwesomeDialog(
         context: context,
         animType: AnimType.LEFTSLIDE,
         headerAnimationLoop: false,
         dialogType: DialogType.NO_HEADER,
         body: widget,
-        showCloseIcon: showIconCancel,
+        showCloseIcon: isShowIconCancel ?? false,
         onDismissCallback: (type) {
           //Navigator.pop(context);
         })

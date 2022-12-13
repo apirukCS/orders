@@ -9,7 +9,7 @@ import 'package:orders/pages/list_product/components/alert_filter_product.dart';
 import 'package:orders/pages/list_product/components/gridview_product.dart';
 import 'package:orders/service/provider/appData.dart';
 import 'package:orders/translations/locale_keys.g.dart';
-import 'package:orders/widgets/awesome_dialog.dart';
+import 'package:orders/widgets/alert.dart';
 import 'package:provider/provider.dart';
 
 class ListProductScreen extends StatefulWidget {
@@ -124,7 +124,7 @@ class _ListProductScreenState extends State<ListProductScreen> {
   }
 
   Future<bool> onWillPop() async {
-    final shouldPop = await AweSomeDialogCustom.alertDialog(
+    final shouldPop = await Alert.alertDialog(
       context,
       LocaleKeys.exit_the_application.tr(),
       LocaleKeys.sub_exit_the_application.tr(),
