@@ -14,7 +14,7 @@ class CardMenuSettings extends StatelessWidget {
         MediaQuery.of(context).padding.top -
         kToolbarHeight;
 
-    int paddingTop = 140;
+    int paddingTop = 100;
 
     return PhysicalModel(
       borderRadius: BorderRadius.circular(20),
@@ -26,7 +26,7 @@ class CardMenuSettings extends StatelessWidget {
           child: ListView(
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
-            children: [
+            children: [ 
               Text(LocaleKeys.settings.tr()),
               const SizedBox(height: 12),
               Padding(

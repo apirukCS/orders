@@ -28,7 +28,6 @@ class _CartState extends State<Cart> {
     return Scaffold(
       appBar: AppBar(
         leading: const IconBack(),
-        //leadingWidth: 0,
         title: Text("${LocaleKeys.title_cart_page.tr()}($countProduct)"),
       ),
       body: Padding(

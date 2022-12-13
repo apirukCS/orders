@@ -1,2 +1,2 @@
-const  String APP_NAME_EN = "RisePlus Shop";
-const  String APP_NAME_TH = "RisePlus Shop";
+const  String APP_NAME_EN = "RisePlus";
+const  String APP_NAME_TH = "ไรส์พลัส";

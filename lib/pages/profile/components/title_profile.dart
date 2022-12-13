@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:orders/pages/edit_profile.dart';
 
 class TitleProfile extends StatelessWidget {
   const TitleProfile({
     Key? key,
     required this.image,
     required this.name,
-    required this.phone,
+    required this.phone
   }) : super(key: key);
 
   final String image;
@@ -14,10 +15,17 @@ class TitleProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
+    return InkWell(
+      onTap: (){
+        _onTapEdit(context);
+      },
       child: Column(
         children: [
+          const Align(
+            alignment: Alignment.centerRight,
+            child: Icon(Icons.edit,
+              color: Colors.black87,),
+          ),
           CircleAvatar(
             radius: 50.0,
             backgroundColor: Theme.of(context).primaryColor,
@@ -62,5 +70,10 @@ class TitleProfile extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void _onTapEdit(BuildContext context) {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const EditProfile()));
   }
 }

@@ -12,7 +12,6 @@ class SettingLanguagesScreen extends StatefulWidget {
 }
 
 class _SettingLanguagesScreenState extends State<SettingLanguagesScreen> {
-
   @override
   Widget build(BuildContext context) {
     bool isEnLocal = Localizations.localeOf(context).languageCode == 'en';
@@ -46,7 +45,7 @@ class _SettingLanguagesScreenState extends State<SettingLanguagesScreen> {
     );
   }
 
-  void _onTapListTile(){
-    setState((){});
+  void _onTapListTile() {
+    setState(() {});
   }
 }
