@@ -56,7 +56,6 @@ class _MyAppState extends State<MyApp> {
         primaryColor: Colors.red.shade900,
       ),
       debugShowCheckedModeBanner: false,
-
       home: const SplashScreen(),
     );
   }

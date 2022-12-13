@@ -12,10 +12,15 @@ import 'package:orders/widgets/full_button.dart';
 import 'package:provider/provider.dart';
 
 class DetailProductScreen extends StatefulWidget {
-  const DetailProductScreen({Key? key, required this.product})
-      : super(key: key);
+  const DetailProductScreen({
+    Key? key,
+    required this.product,
+    required this.onTabAddProductToCart,
+  }) : super(key: key);
 
   final ProductModel product;
+
+  final VoidCallback onTabAddProductToCart;
 
   @override
   State<DetailProductScreen> createState() => _DetailProductScreenState();
@@ -27,8 +32,6 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
 
   double imgW = 150;
   double imgH = 100;
-
-  bool isOnPressAddProduct = false;
 
   @override
   void initState() {
@@ -84,17 +87,6 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
               ],
             ),
           ),
-          isOnPressAddProduct == true
-              ? Padding(
-                  padding: EdgeInsets.only(left: paddingLeft, top: paddingTop),
-                  child: Image.network(
-                    widget.product.image,
-                    width: imgW,
-                    height: imgH,
-                    fit: BoxFit.fill,
-                  ),
-                )
-              : const SizedBox(),
           Positioned(
             bottom: 0,
             child: InkWell(
@@ -123,32 +115,6 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
   }
 
   void _onTapAddProductToCart() {
-
-    //animation when add product
-    /*setState(() {
-      isOnPressAddProduct = true;
-    });
-    animationAddProduct().then((value){
-      int proId = widget.product.productId;
-
-      var contain = context
-          .read<AppData>()
-          .products
-          .where((element) => element.productId == proId);
-      if (contain.isEmpty) {
-        context.read<AppData>().products.add(widget.product);
-        setState(() {});
-      } else {
-        AweSomeDialogCustom.alertDialog(
-            context,
-            "\n${LocaleKeys.has_product_in_cart.tr()}",
-            "",
-            DialogType.noHeader,
-                () {});
-      }
-    });*/
-
-    //not animation
     int proId = widget.product.productId;
     var contain = context
         .read<AppData>()
@@ -156,34 +122,16 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
         .where((element) => element.productId == proId);
     if (contain.isEmpty) {
       context.read<AppData>().products.add(widget.product);
+      widget.onTabAddProductToCart();
       setState(() {});
     } else {
       AweSomeDialogCustom.alertDialog(
-          context,
-          "\n${LocaleKeys.has_product_in_cart.tr()}",
-          "",
-          DialogType.noHeader,
-          () {});
-    }
-  }
-
-  Future<void> animationAddProduct() async {
-    for (int i = 0; i < paddingTop; i++) {
-      if (paddingTop >= 20) {
-        await Future.delayed(const Duration(microseconds: 1), () {
-          setState(() {
-            paddingTop = paddingTop - 1;
-            paddingLeft = paddingLeft + 0.5;
-            imgW = imgW - 0.1;
-            imgH = imgH - 0.1;
-          });
-        });
-        i = 0;
-      } else {
-        setState(() {
-          isOnPressAddProduct = false;
-        });
-      }
+        context,
+        "\n${LocaleKeys.has_product_in_cart.tr()}",
+        "",
+        DialogType.noHeader,
+        () {},
+      );
     }
   }
 }

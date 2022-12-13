@@ -7,8 +7,10 @@ import 'package:orders/widgets/full_button_outline.dart';
 import 'package:provider/provider.dart';
 
 class SelectedSortByPrice extends StatefulWidget {
-  const SelectedSortByPrice({Key? key, required this.isSelectedDescending})
-      : super(key: key);
+  const SelectedSortByPrice({
+    Key? key,
+    required this.isSelectedDescending,
+  }) : super(key: key);
 
   final Function(String) isSelectedDescending;
 

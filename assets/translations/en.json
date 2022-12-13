@@ -1,4 +1,6 @@
 {
+  "home" : "Home",
+
   "title_list_product_page" : "ListProduct",
   "name_menu_setting_language" : "Language",
   "setting_language" : "SettingLanguage",
@@ -48,5 +50,8 @@
   "alert_wrong_email_or_password" : "Email or password is incorrect.",
 
   "profile" : "Profile",
-  "sign_out" : "Sign out"
+  "sign_out" : "Sign out",
+  "account" : "Account",
+  "setting_account" : "Setting Account",
+  "settings" : "Settings"
 }

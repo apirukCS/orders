@@ -8,6 +8,7 @@ import 'package:orders/sizes/sizes.dart';
 import 'package:orders/translations/locale_keys.g.dart';
 import 'package:orders/widgets/awesome_dialog.dart';
 import 'package:orders/widgets/full_button.dart';
+import 'package:orders/widgets/icon_back.dart';
 import 'package:provider/provider.dart';
 
 class Cart extends StatefulWidget {
@@ -26,15 +27,7 @@ class _CartState extends State<Cart> {
 
     return Scaffold(
       appBar: AppBar(
-        leading: InkWell(
-          child: const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Icon(Icons.arrow_back_ios_new),
-          ),
-          onTap: () {
-            Navigator.pop(context);
-          },
-        ),
+        leading: const IconBack(),
         //leadingWidth: 0,
         title: Text("${LocaleKeys.title_cart_page.tr()}($countProduct)"),
       ),
@@ -47,7 +40,7 @@ class _CartState extends State<Cart> {
             return ListTileProductInCart(
               product: context.read<AppData>().products[index],
               onTapRemove: () {
-                onTapRemove();
+                _onTapRemove();
               },
             );
           },
@@ -73,12 +66,12 @@ class _CartState extends State<Cart> {
 
   void _onTapByProduct() {
     AweSomeDialogCustom.alertDialog(
-        context,
-        "\n${LocaleKeys.confirm_order.tr()}",
-        "",
-        DialogType.noHeader,
-        _onConfirmBuyProduct,
-        () {});
+      context,
+      "\n${LocaleKeys.confirm_order.tr()}",
+      "",
+      DialogType.noHeader,
+      _onConfirmBuyProduct
+    );
   }
 
   void _onConfirmBuyProduct() {
@@ -91,7 +84,7 @@ class _CartState extends State<Cart> {
     );
   }
 
-  void onTapRemove() {
+  void _onTapRemove() {
     setState(() {});
   }
 }

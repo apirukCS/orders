@@ -39,8 +39,8 @@ class _SplashScreenState extends State<SplashScreen> {
                       padding: EdgeInsets.all(10.0),
                       child: NameAndLogoApp(),
                     ),
-                    const SizedBox(height: 24,),
-                    SpinKitWave(
+                    const SizedBox(height: 24),
+                    SpinKitSquareCircle(
                       color: Theme.of(context).primaryColor,
                       size: 40.0,
                     ),

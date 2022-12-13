@@ -53,11 +53,6 @@ class _ChartsScreenState extends State<ChartsScreen> {
                           primaryXAxis: CategoryAxis(
                             labelRotation: 90,
                           ),
-                          /*primaryYAxis: NumericAxis(
-                              title: AxisTitle(
-                                  text: 'ราคาสินค้า',
-                              )
-                          ),*/
                           series: <ChartSeries>[
                             ColumnSeries<ProductModel, String>(
                               animationDuration: 2000,

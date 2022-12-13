@@ -1,9 +1,7 @@
 import 'dart:async';
-
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:orders/api/api_user.dart';
 import 'package:orders/pages/homepage/home_page_screen.dart';
 import 'package:orders/pages/login/components/forgot_password.dart';
@@ -11,6 +9,7 @@ import 'package:orders/pages/login/components/name_and_logo_app.dart';
 import 'package:orders/service/provider/appData.dart';
 import 'package:orders/translations/locale_keys.g.dart';
 import 'package:orders/widgets/awesome_dialog.dart';
+import 'package:orders/widgets/dialog_loading.dart';
 import 'package:orders/widgets/full_button.dart';
 import 'package:provider/provider.dart';
 import 'components/dont_have_account.dart';
@@ -97,9 +96,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                           obscurePassword == false
                                               ? Icons.visibility
                                               : Icons.visibility_off,
-                                          color: obscurePassword == true
-                                              ? Theme.of(context).primaryColor
-                                              : Colors.blue.shade700,
+                                          color: Theme.of(context).primaryColor,
                                         ),
                                       ),
                                       hintText: LocaleKeys.password.tr(),
@@ -152,12 +149,11 @@ class _LoginScreenState extends State<LoginScreen> {
       String email = emailController.text.toString();
       String password = passwordController.text.toString();
 
-      /*String email = "test1@gmail.com";
-      String password = "test1@password";*/
-
       AweSomeDialogCustom.alertDialogJustHaveBody(
-          context, widgetDialogLoading(), false);
-
+        context,
+        const DialogLoading(),
+        false,
+      );
       Future.delayed(const Duration(seconds: 1), () {
         ApiUser.fetchAllUsers().then((value) {
           var contain = value.where((element) =>
@@ -172,11 +168,12 @@ class _LoginScreenState extends State<LoginScreen> {
           } else {
             Navigator.pop(context);
             AweSomeDialogCustom.alertDialog(
-                context,
-                "\n${LocaleKeys.alert_wrong_email_or_password.tr()}",
-                "",
-                DialogType.noHeader,
-                () {});
+              context,
+              "\n${LocaleKeys.alert_wrong_email_or_password.tr()}",
+              "",
+              DialogType.noHeader,
+              () {},
+            );
           }
         });
       });
@@ -192,27 +189,5 @@ class _LoginScreenState extends State<LoginScreen> {
   void _onTapBody() {
     fEmail.unfocus();
     fPassword.unfocus();
-  }
-
-  Widget widgetDialogLoading() {
-    return Padding(
-      padding: const EdgeInsets.all(24.0),
-      child: Column(
-        children: [
-          SpinKitWave(
-            color: Theme.of(context).primaryColor,
-            size: 40.0,
-          ),
-          const SizedBox(height: 16),
-          const Text(
-            "กำลังโหลด...",
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ],
-      ),
-    );
   }
 }

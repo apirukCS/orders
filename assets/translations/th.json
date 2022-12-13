@@ -1,4 +1,6 @@
 {
+  "home" : "หน้าแรก",
+
   "title_list_product_page" : "รายการสินค้า",
 
   "name_menu_setting_language" : "ภาษา",
@@ -49,5 +51,8 @@
   "alert_wrong_email_or_password" : "อีเมลหรือรหัสผ่านไม่ถูกต้อง",
 
   "profile" : "โปรไฟล์",
-  "sign_out" : "ออกจากระบบ"
+  "sign_out" : "ออกจากระบบ",
+  "account" : "บัญชี",
+  "setting_account" : "ตั้งค่าบัญชี",
+  "settings" : "ตั้งค่า"
 }

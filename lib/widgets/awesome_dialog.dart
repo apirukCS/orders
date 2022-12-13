@@ -2,15 +2,12 @@ import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 
 class AweSomeDialogCustom {
-
   static alertDialog(context, String title, String desc,
       DialogType type,[VoidCallback? btnOkOnPress,VoidCallback? btnCancelOnPress]) {
     return AwesomeDialog(
         context: context,
         animType: AnimType.topSlide,
-        //headerAnimationLoop: true,
         dialogType: type,
-        //showCloseIcon: true,
         title: title,
         titleTextStyle:const TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
         desc: desc,

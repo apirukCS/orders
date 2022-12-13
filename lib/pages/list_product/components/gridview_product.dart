@@ -5,19 +5,20 @@ import 'package:orders/pages/detail_product/detail_product_screen.dart';
 import 'package:orders/sizes/sizes.dart';
 
 class GridViewProduct extends StatefulWidget {
-  const GridViewProduct(
-      {Key? key,
-      required this.products,
-      required this.isDescending,
-      required this.minimumPrice,
-      required this.maximumPrice})
-      : super(key: key);
+  const GridViewProduct({
+    Key? key,
+    required this.products,
+    required this.isDescending,
+    required this.minimumPrice,
+    required this.maximumPrice,
+    required this.onTabAddProductToCart,
+  }) : super(key: key);
 
   final List<ProductModel> products;
-
   final String isDescending;
   final int minimumPrice;
   final int maximumPrice;
+  final VoidCallback onTabAddProductToCart;
 
   @override
   State<GridViewProduct> createState() => _GridViewProductState();
@@ -141,7 +142,10 @@ class _GridViewProductState extends State<GridViewProduct> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => DetailProductScreen(product: product),
+        builder: (context) => DetailProductScreen(
+          product: product,
+          onTabAddProductToCart: widget.onTabAddProductToCart,
+        ),
       ),
     );
   }

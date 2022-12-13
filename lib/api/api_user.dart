@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:orders/model/user_model.dart';
 
 class ApiUser {

@@ -1,8 +1,4 @@
-enum SortByPrice {
-  NotSpecified,
-  Descending,
-  NotDescending
-}
+enum SortByPrice { NotSpecified, Descending, NotDescending }
 
 extension ParseToString on SortByPrice {
   String enumToString() {

@@ -26,11 +26,14 @@ class SignOut extends StatelessWidget {
 
   void onTapSignOut(BuildContext context) {
     AweSomeDialogCustom.alertDialog(
-        context,
-        LocaleKeys.exit_the_application.tr(),
-        LocaleKeys.sub_exit_the_application.tr(),
-        DialogType.question, () {
-      SystemNavigator.pop();
-    }, () {});
+      context,
+      LocaleKeys.exit_the_application.tr(),
+      LocaleKeys.sub_exit_the_application.tr(),
+      DialogType.question,
+      () {
+        SystemNavigator.pop();
+      },
+      () {},
+    );
   }
 }

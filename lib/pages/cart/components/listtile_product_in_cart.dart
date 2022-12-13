@@ -65,12 +65,13 @@ class _ListTileProductInCartState extends State<ListTileProductInCart> {
 
   void _removeProductInCart() {
     AweSomeDialogCustom.alertDialog(
-        context,
-        LocaleKeys.title_dialog_remove_product_in_cart.tr(),
-        LocaleKeys.detail_dialog_remove_product_in_cart.tr(),
-        DialogType.question,
-        _confirmRemove,
-        () {});
+      context,
+      LocaleKeys.title_dialog_remove_product_in_cart.tr(),
+      LocaleKeys.detail_dialog_remove_product_in_cart.tr(),
+      DialogType.question,
+      _confirmRemove,
+      () {},
+    );
   }
 
   void _confirmRemove() {
@@ -86,15 +87,15 @@ class _ListTileProductInCartState extends State<ListTileProductInCart> {
 
   void _onTapImage() {
     AweSomeDialogCustom.alertDialogJustHaveBody(
-        context,
-        Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Image.network(
-            widget.product.image,
-            //width: w * 0.2,
-            fit: BoxFit.fill,
-          ),
+      context,
+      Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Image.network(
+          widget.product.image,
+          fit: BoxFit.fill,
         ),
-        true);
+      ),
+      true,
+    );
   }
 }

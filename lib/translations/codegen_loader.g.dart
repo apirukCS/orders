@@ -15,6 +15,7 @@ class CodegenLoader extends AssetLoader{
   }
 
   static const Map<String,dynamic> en = {
+  "home": "Home",
   "title_list_product_page": "ListProduct",
   "name_menu_setting_language": "Language",
   "setting_language": "SettingLanguage",
@@ -56,9 +57,13 @@ class CodegenLoader extends AssetLoader{
   "register": "Register",
   "alert_wrong_email_or_password": "Email or password is incorrect.",
   "profile": "Profile",
-  "sign_out": "Sign out"
+  "sign_out": "Sign out",
+  "account": "Account",
+  "setting_account": "Setting Account",
+  "settings": "Settings"
 };
 static const Map<String,dynamic> th = {
+  "home": "หน้าแรก",
   "title_list_product_page": "รายการสินค้า",
   "name_menu_setting_language": "ภาษา",
   "setting_language": "ตั้งค่าภาษา",
@@ -100,7 +105,10 @@ static const Map<String,dynamic> th = {
   "register": "ลงทะเบียน",
   "alert_wrong_email_or_password": "อีเมลหรือรหัสผ่านไม่ถูกต้อง",
   "profile": "โปรไฟล์",
-  "sign_out": "ออกจากระบบ"
+  "sign_out": "ออกจากระบบ",
+  "account": "บัญชี",
+  "setting_account": "ตั้งค่าบัญชี",
+  "settings": "ตั้งค่า"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"en": en, "th": th};
 }
